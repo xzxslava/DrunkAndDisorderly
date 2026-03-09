@@ -10,7 +10,7 @@ public class WaveManager : MonoBehaviour
     public List<BarSlot> barSlots = new List<BarSlot>();
 
     [Header("Prefabs")]
-    public GameObject[] customerPrefabs; // префабы разных рас
+    public GameObject[] customerPrefabs;
 
     [Header("Wave Settings")]
     public int currentWave = 0;
@@ -25,16 +25,64 @@ public class WaveManager : MonoBehaviour
 
     private DayProgression dayProgression;
     private Coroutine waveCoroutine;
+    private GoldManager goldManager;
+    private GameManager gameManager;
 
-    private void Awake()
+    private void Start()
     {
+        Debug.Log("WaveManager Start");
+
+        // Находим необходимые компоненты
         dayProgression = GetComponent<DayProgression>();
         if (dayProgression == null)
             dayProgression = FindObjectOfType<DayProgression>();
+
+        goldManager = GetComponent<GoldManager>();
+        if (goldManager == null)
+            goldManager = FindObjectOfType<GoldManager>();
+
+        gameManager = GetComponent<GameManager>();
+        if (gameManager == null)
+            gameManager = FindObjectOfType<GameManager>();
+
+        // Проверка настроек
+        Debug.Log($"SpawnPoint: {spawnPoint}");
+        Debug.Log($"ExitPoint: {exitPoint}");
+        Debug.Log($"BarSlots count: {(barSlots != null ? barSlots.Count : 0)}");
+        Debug.Log($"CustomerPrefabs count: {(customerPrefabs != null ? customerPrefabs.Length : 0)}");
+
+        // Проверка каждого слота
+        if (barSlots != null)
+        {
+            for (int i = 0; i < barSlots.Count; i++)
+            {
+                Debug.Log($"BarSlot[{i}]: {barSlots[i]}");
+            }
+        }
     }
 
     public void StartWaves()
     {
+        Debug.Log("StartWaves called");
+
+        if (customerPrefabs == null || customerPrefabs.Length == 0)
+        {
+            Debug.LogError("No customer prefabs assigned!");
+            return;
+        }
+
+        if (spawnPoint == null)
+        {
+            Debug.LogError("SpawnPoint not assigned!");
+            return;
+        }
+
+        if (barSlots == null || barSlots.Count == 0)
+        {
+            Debug.LogError("No bar slots assigned!");
+            return;
+        }
+
         if (waveCoroutine != null)
             StopCoroutine(waveCoroutine);
 
@@ -43,10 +91,12 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator WaveRoutine()
     {
+        Debug.Log("WaveRoutine started");
         yield return new WaitForSeconds(initialDelay);
 
         for (currentWave = 0; currentWave < wavesPerDay; currentWave++)
         {
+            Debug.Log($"Starting wave {currentWave + 1} of {wavesPerDay}");
             StartWave(currentWave);
 
             // Ждём, пока волна закончится (все посетители обслужены/ушли)
@@ -55,44 +105,40 @@ public class WaveManager : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
             }
 
-            Debug.Log($"Wave {currentWave + 1} completed");
+            Debug.Log($"Wave {currentWave + 1} completed. Active customers: {activeCustomers}");
 
             if (currentWave < wavesPerDay - 1)
             {
                 // Небольшая пауза между волнами
-                yield return new WaitForSeconds(2f);
-
-                // Автоматический запуск или ожидание тапа игрока
-                if (autoStartNextWave)
-                {
-                    // Продолжаем автоматически
-                }
-                else
-                {
-                    // TODO: ждём тапа игрока по кнопке
-                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-                }
+                Debug.Log($"Waiting {waveInterval} seconds before next wave");
+                yield return new WaitForSeconds(waveInterval);
             }
         }
 
         Debug.Log("All waves completed for today");
-        GameManager.Instance?.EndDay();
+
+        if (gameManager != null)
+            gameManager.EndDay();
     }
 
     private void StartWave(int waveIndex)
     {
         isWaveActive = true;
+        activeCustomers = 0; // Сбрасываем счётчик для новой волны
         EventManager.OnWaveStarted?.Invoke(waveIndex);
 
         int customersCount = dayProgression != null
             ? dayProgression.GetCustomersPerWave()
             : 3 + waveIndex;
 
+        Debug.Log($"Wave {waveIndex + 1} will spawn {customersCount} customers");
         StartCoroutine(SpawnWaveCustomers(customersCount));
     }
 
     private IEnumerator SpawnWaveCustomers(int count)
     {
+        Debug.Log($"Starting to spawn {count} customers");
+
         for (int i = 0; i < count; i++)
         {
             SpawnCustomer();
@@ -102,47 +148,80 @@ public class WaveManager : MonoBehaviour
 
     private void SpawnCustomer()
     {
-        // Находим свободный слот
+        Debug.Log("Trying to spawn customer");
+
+        // Проверяем наличие свободных слотов
         BarSlot freeSlot = GetFreeSlot();
         if (freeSlot == null)
         {
-            Debug.Log("No free slots, customer will wait");
-            // TODO: реализовать ожидание у входа
+            Debug.Log("No free slots available");
+            return;
+        }
+
+        Debug.Log($"Free slot found at index {barSlots.IndexOf(freeSlot)}");
+
+        // Проверяем префабы
+        if (customerPrefabs == null || customerPrefabs.Length == 0)
+        {
+            Debug.LogError("No customer prefabs assigned!");
             return;
         }
 
         // Выбираем случайного посетителя
-        GameObject prefab = customerPrefabs[Random.Range(0, customerPrefabs.Length)];
+        int randomIndex = Random.Range(0, customerPrefabs.Length);
+        GameObject prefab = customerPrefabs[randomIndex];
 
-        // Спавним через пул или напрямую
-        GameObject customer = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        if (prefab == null)
+        {
+            Debug.LogError($"Prefab at index {randomIndex} is null!");
+            return;
+        }
+
+        Debug.Log($"Selected prefab: {prefab.name}");
+
+        // Помечаем слот как занятый сразу
+        freeSlot.isOccupied = true;
+
+        // Создаём посетителя
+        GameObject newCustomer = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         activeCustomers++;
 
-        // Инициализируем
-        CustomerBase customerBase = customer.GetComponent<CustomerBase>();
-        if (customerBase != null)
+        Debug.Log($"Customer instantiated. Active customers: {activeCustomers}");
+
+        // Настраиваем движение
+        CustomerMovement movement = newCustomer.GetComponent<CustomerMovement>();
+        if (movement != null)
         {
-            // TODO: передавать данные о расе
-            customerBase.Initialize(null, freeSlot);
+            movement.Initialize(freeSlot.transform.position);
+            movement.SetExitPoint(exitPoint); // Добавим этот метод позже
+            Debug.Log("Movement initialized");
         }
         else
         {
-            // Если нет CustomerBase, хотя бы двигаем к слоту
-            CustomerMovement movement = customer.GetComponent<CustomerMovement>();
-            if (movement != null)
-            {
-                movement.Initialize(freeSlot.transform.position);
-            }
+            Debug.LogError("Customer prefab has no CustomerMovement component!");
         }
 
-        freeSlot.Occupy(customer);
+        // Настраиваем слот
+        freeSlot.Occupy(newCustomer);
+
+        // Подписываемся на событие ухода
+        StartCoroutine(WaitForCustomerLeave(newCustomer));
+    }
+
+    private IEnumerator WaitForCustomerLeave(GameObject customer)
+    {
+        // Ждём, пока объект не будет уничтожен
+        yield return new WaitUntil(() => customer == null);
+        CustomerLeft();
     }
 
     private BarSlot GetFreeSlot()
     {
+        if (barSlots == null) return null;
+
         foreach (var slot in barSlots)
         {
-            if (!slot.isOccupied)
+            if (slot != null && !slot.isOccupied)
                 return slot;
         }
         return null;
@@ -151,15 +230,36 @@ public class WaveManager : MonoBehaviour
     public void CustomerLeft()
     {
         activeCustomers--;
+        Debug.Log($"Customer left. Active customers: {activeCustomers}");
+
         if (activeCustomers <= 0 && isWaveActive)
         {
             isWaveActive = false;
             EventManager.OnWaveEnded?.Invoke();
+            Debug.Log("Wave ended");
         }
     }
 
     public Transform GetExitPoint()
     {
         return exitPoint;
+    }
+
+    // Визуализация в редакторе
+    private void OnDrawGizmos()
+    {
+        if (spawnPoint != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(spawnPoint.position, 0.3f);
+            Gizmos.DrawWireCube(spawnPoint.position + Vector3.up, new Vector3(1, 2, 1));
+        }
+
+        if (exitPoint != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(exitPoint.position, 0.3f);
+            Gizmos.DrawWireCube(exitPoint.position + Vector3.up, new Vector3(1, 2, 1));
+        }
     }
 }

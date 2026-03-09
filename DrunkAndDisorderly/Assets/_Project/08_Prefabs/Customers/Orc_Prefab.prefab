@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 4645029175636907308}
   - component: {fileID: 5466568422683568999}
   - component: {fileID: 8675822118404741701}
+  - component: {fileID: 2442365998004598413}
   m_Layer: 0
   m_Name: Orc_Prefab
   m_TagString: Untagged
@@ -205,9 +206,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   rotationSpeed: 5
-  targetSlot: {fileID: 0}
-  isMovingToSlot: 1
+  isMoving: 1
   isLeaving: 0
+  isInitialized: 0
+--- !u!114 &2442365998004598413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943192187923395740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee0c0bfd5df03648b972202a37a6d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  race: {fileID: 0}
+  currentOrder: {fileID: 0}
+  currentPatience: 0
+  isSitting: 0
+  isAngry: 0
+  isLeaving: 0
+  orderIconPosition: {fileID: 0}
+  patienceBarPosition: {fileID: 0}
 --- !u!1 &4438300678434447816
 GameObject:
   m_ObjectHideFlags: 0

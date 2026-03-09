@@ -34,6 +34,21 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // Находим компоненты, если не назначены
+        if (waveManager == null)
+            waveManager = FindObjectOfType<WaveManager>();
+
+        if (goldManager == null)
+            goldManager = FindObjectOfType<GoldManager>();
+
+        if (dayProgression == null)
+            dayProgression = FindObjectOfType<DayProgression>();
+
+        if (poolManager == null)
+            poolManager = FindObjectOfType<PoolManager>();
+
+        Debug.Log($"GameManager Start - waveManager: {waveManager}");
+
         InitializeGame();
     }
 
@@ -41,14 +56,32 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"Game started. Day {currentDay}");
         playerLives = 3;
-        goldManager?.Reset(500);
-        dayProgression?.StartDay(currentDay);
+
+        if (goldManager != null)
+            goldManager.Reset(500);
+        else
+            Debug.LogError("GoldManager is null!");
+
+        if (dayProgression != null)
+            dayProgression.StartDay(currentDay);
+        else
+            Debug.LogError("DayProgression is null!");
+
         Invoke(nameof(StartFirstWave), startDelay);
     }
 
     private void StartFirstWave()
     {
-        waveManager?.StartWaves();
+        Debug.Log($"StartFirstWave called. waveManager null? {waveManager == null}");
+
+        if (waveManager != null)
+        {
+            waveManager.StartWaves();
+        }
+        else
+        {
+            Debug.LogError("WaveManager is null! Cannot start waves.");
+        }
     }
 
     public void TakeDamage()
@@ -62,23 +95,24 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // Визуальный/звуковой эффект
+            EventManager.OnPlayerHit?.Invoke(playerLives);
         }
     }
 
     private void GameOver()
     {
         Debug.Log("Game Over!");
-        // Заглушка: рестарт или возврат в меню
     }
 
     public void EndDay()
     {
         Debug.Log($"Day {currentDay} ended");
 
-        // Платёж казначею
-        int dailyDebt = dayProgression.GetDailyDebt();
-        goldManager.PayDebt(dailyDebt);
+        if (goldManager != null && dayProgression != null)
+        {
+            int dailyDebt = dayProgression.GetDailyDebt();
+            goldManager.PayDebt(dailyDebt);
+        }
 
         currentDay++;
 
@@ -89,13 +123,12 @@ public class GameManager : MonoBehaviour
         else
         {
             uiManager?.ShowUpgradeShop();
-            dayProgression.StartDay(currentDay);
+            dayProgression?.StartDay(currentDay);
         }
     }
 
     private void HandleGameComplete()
     {
-        Debug.Log("Main campaign completed! New Game+ unlocked?");
-        // TODO: разблокировка New Game+
+        Debug.Log("Main campaign completed!");
     }
 }

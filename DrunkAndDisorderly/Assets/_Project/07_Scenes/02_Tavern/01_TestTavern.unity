@@ -239,7 +239,8 @@ GameObject:
   - component: {fileID: 259304265}
   - component: {fileID: 259304264}
   - component: {fileID: 259304263}
-  - component: {fileID: 259304262}
+  - component: {fileID: 259304268}
+  - component: {fileID: 259304269}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -247,7 +248,120 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &259304262
+--- !u!114 &259304263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259304261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996551f961806f04682041187d1252bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGold: 500
+  totalEarned: 0
+  debt: 10000
+  debtPaid: 0
+  maxGold: 99999
+--- !u!114 &259304264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259304261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f67d085878f9a946ab9f89765a2dd6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 487677039}
+  exitPoint: {fileID: 710380277}
+  barSlots:
+  - {fileID: 1294501373}
+  - {fileID: 883487835}
+  - {fileID: 115745508}
+  - {fileID: 778649142}
+  customerPrefabs:
+  - {fileID: 101070636414892463, guid: 8c69be85fefffe14bbf439a8715b8568, type: 3}
+  - {fileID: 3806484602100460147, guid: 4ad1e82abfd7f6942bf94e8257f7db89, type: 3}
+  - {fileID: 2291620404783362540, guid: 479d80ccebea59c4680bc6446802821b, type: 3}
+  - {fileID: 3490684164277183304, guid: c1bb90eef723a9a44a8c9fe283910d2c, type: 3}
+  - {fileID: 3943192187923395740, guid: 11211bb88b201ad45836d115438b50eb, type: 3}
+  currentWave: 0
+  wavesPerDay: 3
+  initialDelay: 2
+  waveInterval: 10
+  autoStartNextWave: 1
+  isWaveActive: 0
+  activeCustomers: 0
+--- !u!114 &259304265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259304261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde5be5fc44fdb043b4846544c30533e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools: []
+--- !u!114 &259304266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259304261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a29eb55761f1e4a81392422d2ab8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldManager: {fileID: 259304263}
+  waveManager: {fileID: 259304264}
+  dayProgression: {fileID: 259304269}
+  uiManager: {fileID: 0}
+  poolManager: {fileID: 259304265}
+  currentDay: 1
+  maxDays: 71
+  playerLives: 3
+  startDelay: 2
+--- !u!4 &259304267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259304261}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.65561, y: 13.633604, z: -7.173995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &259304268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259304261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d5a9264213fe8459e6d7f4b06ce22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resources: []
+  deliveryTime: 30
+  isDeliveryPending: 0
+--- !u!114 &259304269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,95 +400,6 @@ MonoBehaviour:
   orcsUnlockDay: 32
   elvesUnlockDay: 42
   fairiesUnlockDay: 52
---- !u!114 &259304263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259304261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996551f961806f04682041187d1252bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentGold: 500
-  totalEarned: 0
-  debt: 10000
-  debtPaid: 0
-  maxGold: 99999
---- !u!114 &259304264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259304261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f67d085878f9a946ab9f89765a2dd6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  exitPoint: {fileID: 0}
-  barSlots: []
-  customerPrefabs: []
-  currentWave: 0
-  wavesPerDay: 3
-  initialDelay: 2
-  waveInterval: 10
-  autoStartNextWave: 1
-  isWaveActive: 0
-  activeCustomers: 0
---- !u!114 &259304265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259304261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde5be5fc44fdb043b4846544c30533e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pools: []
---- !u!114 &259304266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259304261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4a29eb55761f1e4a81392422d2ab8f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goldManager: {fileID: 0}
-  waveManager: {fileID: 0}
-  dayProgression: {fileID: 0}
-  uiManager: {fileID: 0}
-  poolManager: {fileID: 0}
-  currentDay: 1
-  maxDays: 71
-  playerLives: 3
-  startDelay: 2
---- !u!4 &259304267
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259304261}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.65561, y: 13.633604, z: -7.173995}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339984931
 GameObject:
   m_ObjectHideFlags: 0

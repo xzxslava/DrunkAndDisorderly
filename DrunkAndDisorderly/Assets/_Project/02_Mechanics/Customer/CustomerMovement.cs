@@ -9,9 +9,11 @@ public class CustomerMovement : MonoBehaviour
     [Header("State")]
     public bool isMoving = true;
     public bool isLeaving = false;
+    public bool isInitialized = false; // Флаг инициализации
 
     private Vector3 targetPosition;
     private Quaternion targetRotation;
+    private Transform exitPoint;
     private CustomerBase customer;
 
     private void Awake()
@@ -25,13 +27,32 @@ public class CustomerMovement : MonoBehaviour
 
         // Поворот лицом к бару (условно)
         Vector3 directionToBar = new Vector3(-1, 0, 0);
-        targetRotation = Quaternion.LookRotation(directionToBar);
+        if (directionToBar != Vector3.zero)
+        {
+            targetRotation = Quaternion.LookRotation(directionToBar);
+        }
+        else
+        {
+            targetRotation = Quaternion.identity;
+        }
 
         isMoving = true;
+        isInitialized = true;
+
+        Debug.Log($"Customer initialized. Target: {targetPosition}");
+    }
+
+    public void SetExitPoint(Transform exit)
+    {
+        exitPoint = exit;
+        Debug.Log($"Exit point set: {exit.position}");
     }
 
     private void Update()
     {
+        // Не двигаемся, если не инициализированы
+        if (!isInitialized) return;
+
         if (isLeaving)
         {
             MoveToExit();
@@ -44,26 +65,38 @@ public class CustomerMovement : MonoBehaviour
 
     private void MoveToSlot()
     {
+        // Проверка на валидность
+        if (targetPosition == null)
+        {
+            Debug.LogError("Target position is null!");
+            return;
+        }
+
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
         {
             isMoving = false;
-            customer.isSitting = true;
+            if (customer != null)
+                customer.isSitting = true;
 
-            // Сидим на месте, ждём
             Debug.Log($"{name} сел на место");
         }
     }
 
     private void MoveToExit()
     {
-        Vector3 exitPos = new Vector3(5, 0, -3); // TODO: брать из GameManager или WaveManager
+        if (exitPoint == null)
+        {
+            Debug.LogError("Exit point is null, destroying customer");
+            Destroy(gameObject);
+            return;
+        }
 
-        transform.position = Vector3.MoveTowards(transform.position, exitPos, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, exitPoint.position, moveSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, exitPos) < 0.5f)
+        if (Vector3.Distance(transform.position, exitPoint.position) < 0.5f)
         {
             Destroy(gameObject);
         }
