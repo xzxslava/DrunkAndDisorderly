@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TapController : EquipmentBase
+public class TapController : MonoBehaviour
 {
     [Header("Drink Settings")]
     public DrinkData drinkType;
@@ -9,87 +10,115 @@ public class TapController : EquipmentBase
 
     [Header("Progress UI")]
     public GameObject progressBarPrefab;
-    private GameObject activeProgressBar;
-    private UnityEngine.UI.Slider progressSlider;
+    public float progressBarHeight = 1.5f;
 
-    protected override void Start()
+    [Header("State")]
+    public bool isBusy = false;
+    public bool hasDrinkReady = false;
+    public GameObject currentDrink;
+
+    private GameObject progressBar;
+    private Slider progressSlider;
+    private float currentProgress;
+    private float totalProgress;
+    private Material originalMaterial;
+    private Renderer tapRenderer;
+
+    private void Start()
     {
-        base.Start();
-        equipmentType = EquipmentType.Tap;
+        tapRenderer = GetComponent<Renderer>();
+        if (tapRenderer != null)
+            originalMaterial = tapRenderer.material;
 
+        if (pourPosition == null)
+            pourPosition = transform;
+    }
+
+    private void OnMouseDown()
+    {
+        Debug.Log($"Tap clicked: {drinkType?.drinkName}");
+        TryStartPouring();
+    }
+
+    public void TryStartPouring()
+    {
+        if (isBusy || hasDrinkReady) return;
+
+        // Проверяем, есть ли ресурсы
         if (drinkType != null)
         {
-            equipmentName = drinkType.drinkName + " Tap";
-            currentActionTime = drinkType.preparationTime;
-            requiredResource = drinkType.drinkName; // предполагаем, что ресурс называется так же
+            // TODO: проверить ResourceManager
+            StartPouring();
         }
     }
 
-    public override bool TryInteract()
+    private void StartPouring()
     {
-        // Проверяем, есть ли свободный слот для продукта
-        if (!isInteractable) return false;
-        if (currentState != EquipmentState.Idle) return false;
+        isBusy = true;
+        currentProgress = 0f;
+        totalProgress = drinkType != null ? drinkType.preparationTime : 2f;
 
-        return base.TryInteract();
+        CreateProgressBar();
+
+        // Подсветка красным (занят)
+        if (tapRenderer != null)
+            tapRenderer.material.color = Color.red;
+
+        Debug.Log($"Started pouring {drinkType?.drinkName}");
     }
 
-    protected override void StartAction()
+    private void Update()
     {
-        base.StartAction();
-        ShowProgressBar();
+        if (!isBusy) return;
 
-        // Звук наливания
-        if (drinkType != null && drinkType.pourSound != null)
+        currentProgress += Time.deltaTime;
+
+        // Обновляем прогресс-бар
+        if (progressSlider != null)
         {
-            AudioSource.PlayClipAtPoint(drinkType.pourSound, transform.position);
+            progressSlider.value = currentProgress / totalProgress;
         }
-    }
 
-    protected override System.Collections.IEnumerator ActionCoroutine()
-    {
-        float elapsed = 0f;
-
-        while (elapsed < currentActionTime)
+        // Проверяем завершение
+        if (currentProgress >= totalProgress)
         {
-            elapsed += Time.deltaTime;
-
-            if (progressSlider != null)
-            {
-                progressSlider.value = elapsed / currentActionTime;
-            }
-
-            yield return null;
+            FinishPouring();
         }
-
-        CompleteAction();
     }
 
-    protected override void CreateProduct()
+    private void FinishPouring()
     {
+        isBusy = false;
+        hasDrinkReady = true;
+
+        DestroyProgressBar();
+
+        // Создаём напиток
         if (drinkPrefab != null && pourPosition != null)
         {
-            GameObject drink = Instantiate(drinkPrefab, pourPosition.position, Quaternion.identity);
+            currentDrink = Instantiate(drinkPrefab, pourPosition.position, Quaternion.identity);
 
-            // Настраиваем продукт
-            DrinkProduct product = drink.GetComponent<DrinkProduct>();
+            // Настраиваем напиток
+            DrinkProduct product = currentDrink.GetComponent<DrinkProduct>();
             if (product == null)
-                product = drink.AddComponent<DrinkProduct>();
+                product = currentDrink.AddComponent<DrinkProduct>();
 
-            product.Initialize(drinkType);
-
-            Debug.Log($"Poured {drinkType.drinkName}");
+            product.Initialize(drinkType, this);
         }
 
-        HideProgressBar();
+        // Подсветка зелёным (готово)
+        if (tapRenderer != null)
+            tapRenderer.material.color = Color.green;
+
+        Debug.Log($"Finished pouring {drinkType?.drinkName}");
     }
 
-    private void ShowProgressBar()
+    private void CreateProgressBar()
     {
         if (progressBarPrefab == null) return;
 
-        activeProgressBar = Instantiate(progressBarPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity, transform);
-        progressSlider = activeProgressBar.GetComponent<UnityEngine.UI.Slider>();
+        progressBar = Instantiate(progressBarPrefab, transform.position + Vector3.up * progressBarHeight, Quaternion.identity, transform);
+        progressSlider = progressBar.GetComponentInChildren<Slider>();
 
         if (progressSlider != null)
         {
@@ -98,17 +127,23 @@ public class TapController : EquipmentBase
         }
 
         // Добавляем Billboard
-        if (activeProgressBar.GetComponent<Billboard>() == null)
-        {
-            activeProgressBar.AddComponent<Billboard>();
-        }
+        if (progressBar.GetComponent<Billboard>() == null)
+            progressBar.AddComponent<Billboard>();
     }
 
-    private void HideProgressBar()
+    private void DestroyProgressBar()
     {
-        if (activeProgressBar != null)
-        {
-            Destroy(activeProgressBar);
-        }
+        if (progressBar != null)
+            Destroy(progressBar);
+    }
+
+    public void DrinkTaken()
+    {
+        hasDrinkReady = false;
+        currentDrink = null;
+
+        // Возвращаем обычный цвет
+        if (tapRenderer != null)
+            tapRenderer.material.color = originalMaterial != null ? originalMaterial.color : Color.white;
     }
 }

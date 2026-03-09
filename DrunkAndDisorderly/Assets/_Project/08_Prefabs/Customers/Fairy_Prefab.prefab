@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7631322340399188377}
   - component: {fileID: 250436104393195152}
   - component: {fileID: 4017540183141080866}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Right_Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 1514561447333267672}
   - component: {fileID: 2617348864540389458}
   - component: {fileID: 9180847759822532760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Left_Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4404256420414790413}
   - component: {fileID: 6115909018865297735}
   - component: {fileID: 2393524815873647611}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 67982197497830490}
   - component: {fileID: 4662300392728788399}
   - component: {fileID: 6094981975265240404}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,9 @@ GameObject:
   - component: {fileID: 876621084657267753}
   - component: {fileID: 2811344714049869765}
   - component: {fileID: 9105183940145382308}
-  m_Layer: 0
+  - component: {fileID: 4935650191013247869}
+  - component: {fileID: 6055208058843817105}
+  m_Layer: 3
   m_Name: Fairy_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,6 +549,42 @@ MonoBehaviour:
   isLeaving: 0
   orderIconPosition: {fileID: 0}
   patienceBarPosition: {fileID: 0}
+--- !u!114 &4935650191013247869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806484602100460147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49426195df6aad4f892a9ebf5123b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIconPrefab: {fileID: 652605367749770914, guid: eceff456e99dc4844bb81f84c4c1ddbe, type: 3}
+  iconPosition: {fileID: 0}
+  iconHeight: 1.8
+  currentDrink: {fileID: 0}
+--- !u!114 &6055208058843817105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806484602100460147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395fc5e624643c745a8185edf4a6ebb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPatience: 10
+  currentPatience: 0
+  patienceRate: 1
+  patienceBarPrefab: {fileID: 2926187630475117826, guid: 9c945fca3daf4b141ba7ca5dd6f8a5f9, type: 3}
+  barHeight: 2.5
+  fullColor: {r: 0, g: 1, b: 0, a: 1}
+  midColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  emptyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4254860579016055431
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +597,7 @@ GameObject:
   - component: {fileID: 2020524865115602188}
   - component: {fileID: 144137010632951652}
   - component: {fileID: 4270061622984303445}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +704,7 @@ GameObject:
   - component: {fileID: 422270488807786871}
   - component: {fileID: 2753836805257111512}
   - component: {fileID: 477765659778675588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

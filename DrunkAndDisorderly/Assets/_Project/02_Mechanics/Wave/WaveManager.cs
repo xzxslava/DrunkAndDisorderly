@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class WaveManager : MonoBehaviour
 {
+    [Header("Race Data")]
+    public RaceData[] raceData; // должен соответствовать порядку customerPrefabs
+
     [Header("References")]
     public Transform spawnPoint;
     public Transform exitPoint;
@@ -150,7 +153,6 @@ public class WaveManager : MonoBehaviour
     {
         Debug.Log("Trying to spawn customer");
 
-        // Проверяем наличие свободных слотов
         BarSlot freeSlot = GetFreeSlot();
         if (freeSlot == null)
         {
@@ -160,14 +162,12 @@ public class WaveManager : MonoBehaviour
 
         Debug.Log($"Free slot found at index {barSlots.IndexOf(freeSlot)}");
 
-        // Проверяем префабы
         if (customerPrefabs == null || customerPrefabs.Length == 0)
         {
             Debug.LogError("No customer prefabs assigned!");
             return;
         }
 
-        // Выбираем случайного посетителя
         int randomIndex = Random.Range(0, customerPrefabs.Length);
         GameObject prefab = customerPrefabs[randomIndex];
 
@@ -179,32 +179,35 @@ public class WaveManager : MonoBehaviour
 
         Debug.Log($"Selected prefab: {prefab.name}");
 
-        // Помечаем слот как занятый сразу
         freeSlot.isOccupied = true;
 
-        // Создаём посетителя
         GameObject newCustomer = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         activeCustomers++;
 
         Debug.Log($"Customer instantiated. Active customers: {activeCustomers}");
 
-        // Настраиваем движение
+        // Инициализация движения
         CustomerMovement movement = newCustomer.GetComponent<CustomerMovement>();
         if (movement != null)
         {
             movement.Initialize(freeSlot.transform.position);
-            movement.SetExitPoint(exitPoint); // Добавим этот метод позже
-            Debug.Log("Movement initialized");
+            movement.SetExitPoint(exitPoint);
+        }
+
+        // Инициализация расы
+        CustomerBase customerBase = newCustomer.GetComponent<CustomerBase>();
+        if (customerBase != null && raceData != null && raceData.Length > randomIndex)
+        {
+            customerBase.Initialize(raceData[randomIndex]);
+            Debug.Log($"Assigned race: {raceData[randomIndex].raceName}");
         }
         else
         {
-            Debug.LogError("Customer prefab has no CustomerMovement component!");
+            Debug.LogError("CustomerBase or RaceData missing!");
         }
 
-        // Настраиваем слот
         freeSlot.Occupy(newCustomer);
 
-        // Подписываемся на событие ухода
         StartCoroutine(WaitForCustomerLeave(newCustomer));
     }
 

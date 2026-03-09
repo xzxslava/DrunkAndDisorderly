@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c26366701999a84a8594349efff228d, type: 3}
+  m_Name: Aggression_EffectData
+  m_EditorClassIdentifier: 
+  effectName: Aggression
+  description: Human attacks nearest customer
+  targetRace: {fileID: 11400000, guid: 3e5641290cd63a94bae8d58d46b3b27a, type: 2}
+  triggerDrink: {fileID: 11400000, guid: 35535d91dd5abe145b04d07f48360d1a, type: 2}
+  effectType: 3
+  duration: 0
+  radius: 1
+  power: 2
+  effectColor: {r: 1, g: 0.54901963, b: 0, a: 1}
+  vfxPrefab: {fileID: 0}
+  effectMaterial: {fileID: 0}
+  startSound: {fileID: 0}
+  loopSound: {fileID: 0}
+  endSound: {fileID: 0}

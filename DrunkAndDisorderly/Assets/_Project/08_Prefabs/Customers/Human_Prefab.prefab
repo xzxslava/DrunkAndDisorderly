@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 7174956465130346415}
   - component: {fileID: 8640618900006548194}
   - component: {fileID: 7677606907653689148}
-  m_Layer: 0
+  - component: {fileID: 5562413026386654650}
+  - component: {fileID: 5155670965290714920}
+  m_Layer: 3
   m_Name: Human_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,6 +126,42 @@ MonoBehaviour:
   isLeaving: 0
   orderIconPosition: {fileID: 0}
   patienceBarPosition: {fileID: 0}
+--- !u!114 &5562413026386654650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3490684164277183304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49426195df6aad4f892a9ebf5123b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIconPrefab: {fileID: 652605367749770914, guid: eceff456e99dc4844bb81f84c4c1ddbe, type: 3}
+  iconPosition: {fileID: 0}
+  iconHeight: 1.8
+  currentDrink: {fileID: 0}
+--- !u!114 &5155670965290714920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3490684164277183304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395fc5e624643c745a8185edf4a6ebb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPatience: 10
+  currentPatience: 0
+  patienceRate: 1
+  patienceBarPrefab: {fileID: 2926187630475117826, guid: 9c945fca3daf4b141ba7ca5dd6f8a5f9, type: 3}
+  barHeight: 2.5
+  fullColor: {r: 0, g: 1, b: 0, a: 1}
+  midColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  emptyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4011733805360560657
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +174,7 @@ GameObject:
   - component: {fileID: 262951253516985106}
   - component: {fileID: 2197265845893183769}
   - component: {fileID: 2278122626611983271}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Left_Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +279,7 @@ GameObject:
   - component: {fileID: 3221620891681203164}
   - component: {fileID: 3831015865534886595}
   - component: {fileID: 6186982542170941171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Right_Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +384,7 @@ GameObject:
   - component: {fileID: 1597834689217263941}
   - component: {fileID: 2558740631055683933}
   - component: {fileID: 6989605184506826965}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +491,7 @@ GameObject:
   - component: {fileID: 2999598741900697590}
   - component: {fileID: 8991000903662751579}
   - component: {fileID: 5925934792769982290}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +597,7 @@ GameObject:
   - component: {fileID: 507734714313878027}
   - component: {fileID: 6051635930190106328}
   - component: {fileID: 1268601508552575507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +704,7 @@ GameObject:
   - component: {fileID: 4180802265689174126}
   - component: {fileID: 1156474117865846045}
   - component: {fileID: 2938909732945809891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

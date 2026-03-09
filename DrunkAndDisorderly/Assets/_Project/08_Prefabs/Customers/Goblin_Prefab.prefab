@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 69351562034748444}
   - component: {fileID: 1556162110122757686}
   - component: {fileID: 655444091735122990}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Left_Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 5430903655811740227}
   - component: {fileID: 7117361545789316329}
   - component: {fileID: 7654555943125553277}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,9 @@ GameObject:
   - component: {fileID: 2691957903661357955}
   - component: {fileID: -8300719428003974879}
   - component: {fileID: 3105227465492234871}
-  m_Layer: 0
+  - component: {fileID: 6313969904342783072}
+  - component: {fileID: 7083116471016658747}
+  m_Layer: 3
   m_Name: Goblin_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,6 +338,42 @@ MonoBehaviour:
   isLeaving: 0
   orderIconPosition: {fileID: 0}
   patienceBarPosition: {fileID: 0}
+--- !u!114 &6313969904342783072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2291620404783362540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49426195df6aad4f892a9ebf5123b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIconPrefab: {fileID: 652605367749770914, guid: eceff456e99dc4844bb81f84c4c1ddbe, type: 3}
+  iconPosition: {fileID: 0}
+  iconHeight: 1.8
+  currentDrink: {fileID: 0}
+--- !u!114 &7083116471016658747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2291620404783362540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395fc5e624643c745a8185edf4a6ebb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPatience: 10
+  currentPatience: 0
+  patienceRate: 1
+  patienceBarPrefab: {fileID: 2926187630475117826, guid: 9c945fca3daf4b141ba7ca5dd6f8a5f9, type: 3}
+  barHeight: 2.5
+  fullColor: {r: 0, g: 1, b: 0, a: 1}
+  midColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  emptyColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4410403972013047518
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +386,7 @@ GameObject:
   - component: {fileID: 5048541114383198903}
   - component: {fileID: 7332540718248312611}
   - component: {fileID: 5348632464919094593}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +493,7 @@ GameObject:
   - component: {fileID: 8987236040570279821}
   - component: {fileID: 1503709506460489004}
   - component: {fileID: 8459400529537943848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Right_Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +598,7 @@ GameObject:
   - component: {fileID: 8555888353681190046}
   - component: {fileID: 6155193889940349607}
   - component: {fileID: 2835999655778075520}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +704,7 @@ GameObject:
   - component: {fileID: 2648246609314054410}
   - component: {fileID: 8308363499437840482}
   - component: {fileID: 8035905374080523767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

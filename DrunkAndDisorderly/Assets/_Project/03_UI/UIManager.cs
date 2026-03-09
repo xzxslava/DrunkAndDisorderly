@@ -5,23 +5,25 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    [Header("Gold UI")]
+    [Header("Top Panel")]
     public Text goldText;
     public Text debtText;
-
-    [Header("Day UI")]
     public Text dayText;
-    public Text waveText;
+
+    [Header("Shop")]
+    public GameObject shopPanel;
+    public Button openShopButton;
+    public Button closeShopButton;
+    public Transform shopContentArea; // Ссылка на Content из Scroll View
+    public GameObject shopItemPrefab; // Префаб товара
+
+    [Header("Wave")]
     public Button nextWaveButton;
+    public Text waveText;
 
-    [Header("Resource UI")]
-    public Transform resourcePanel;
-    public GameObject resourceIconPrefab;
-
-    [Header("Upgrade Shop")]
-    public GameObject upgradeShopPanel;
-    public Transform upgradeContainer;
-    public GameObject upgradeItemPrefab;
+    [Header("Game Over")]
+    public GameObject gameOverPanel;
+    public Button restartButton;
 
     [Header("Dialogue")]
     public GameObject dialoguePanel;
@@ -29,9 +31,11 @@ public class UIManager : MonoBehaviour
     public Text dialogueContentText;
     public Image dialoguePortrait;
 
-    [Header("Player Status")]
-    public Image[] lifeIcons; // 3 иконки жизней
-    public Slider dayProgressSlider;
+    [Header("Settings")]
+    public Color positiveGoldColor = Color.yellow;
+    public Color negativeGoldColor = Color.red;
+
+    private WaveManager waveManager;
 
     private void Awake()
     {
@@ -43,12 +47,38 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        waveManager = FindObjectOfType<WaveManager>();
     }
 
     private void Start()
     {
         SubscribeEvents();
         UpdateAllUI();
+
+        if (shopPanel != null)
+            shopPanel.SetActive(false);
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
+
+        if (openShopButton != null)
+            openShopButton.onClick.AddListener(OpenShop);
+
+        if (closeShopButton != null)
+            closeShopButton.onClick.AddListener(CloseShop);
+
+        if (nextWaveButton != null)
+            nextWaveButton.onClick.AddListener(OnNextWaveClicked);
+
+        if (restartButton != null)
+            restartButton.onClick.AddListener(RestartGame);
+
+        // Заполняем магазин товарами
+        PopulateShop();
     }
 
     private void SubscribeEvents()
@@ -57,7 +87,7 @@ public class UIManager : MonoBehaviour
         EventManager.OnDebtPaid += UpdateDebt;
         EventManager.OnDayStarted += UpdateDay;
         EventManager.OnWaveStarted += UpdateWave;
-        EventManager.OnPlayerHit += UpdateLives;
+        EventManager.OnPlayerDied += ShowGameOver;
     }
 
     private void OnDestroy()
@@ -66,7 +96,7 @@ public class UIManager : MonoBehaviour
         EventManager.OnDebtPaid -= UpdateDebt;
         EventManager.OnDayStarted -= UpdateDay;
         EventManager.OnWaveStarted -= UpdateWave;
-        EventManager.OnPlayerHit -= UpdateLives;
+        EventManager.OnPlayerDied -= ShowGameOver;
     }
 
     private void UpdateAllUI()
@@ -80,61 +110,90 @@ public class UIManager : MonoBehaviour
         if (GameManager.Instance != null)
         {
             UpdateDay(GameManager.Instance.currentDay);
-            UpdateLives(GameManager.Instance.playerLives);
         }
     }
 
     private void UpdateGold(int gold)
     {
         if (goldText != null)
+        {
             goldText.text = gold.ToString();
+            goldText.color = gold >= 0 ? positiveGoldColor : negativeGoldColor;
+        }
     }
 
     private void UpdateDebt(int debt)
     {
         if (debtText != null)
+        {
             debtText.text = debt.ToString();
+        }
     }
 
     private void UpdateDay(int day)
     {
         if (dayText != null)
-            dayText.text = $"Day {day}";
-
-        if (dayProgressSlider != null)
         {
-            float progress = (float)day / 71f;
-            dayProgressSlider.value = progress;
+            dayText.text = $"Day {day}";
         }
     }
 
     private void UpdateWave(int wave)
     {
         if (waveText != null)
-            waveText.text = $"Wave {wave + 1}";
-    }
-
-    private void UpdateLives(int lives)
-    {
-        for (int i = 0; i < lifeIcons.Length; i++)
         {
-            if (lifeIcons[i] != null)
-                lifeIcons[i].enabled = i < lives;
+            waveText.text = $"Wave {wave + 1}";
         }
     }
 
-    public void ShowUpgradeShop()
+    public void OpenShop()
     {
-        if (upgradeShopPanel != null)
-            upgradeShopPanel.SetActive(true);
+        if (shopPanel != null)
+        {
+            shopPanel.SetActive(true);
+            Time.timeScale = 0f; // Пауза
+        }
     }
 
-    public void HideUpgradeShop()
+    public void CloseShop()
     {
-        if (upgradeShopPanel != null)
-            upgradeShopPanel.SetActive(false);
+        if (shopPanel != null)
+        {
+            shopPanel.SetActive(false);
+            Time.timeScale = 1f; // Возобновляем
+        }
     }
 
+    private void OnNextWaveClicked()
+    {
+        if (waveManager != null)
+        {
+            // Если есть метод ForceNextWave, вызываем его
+            // waveManager.ForceNextWave();
+        }
+
+        if (nextWaveButton != null)
+            nextWaveButton.gameObject.SetActive(false);
+    }
+
+    public void ShowGameOver()
+    {
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
+        );
+    }
+
+    // Методы для диалогов (исправляют ошибки)
     public void ShowDialogue(string speaker, string text, Sprite portrait = null)
     {
         if (dialoguePanel != null)
@@ -158,9 +217,38 @@ public class UIManager : MonoBehaviour
             dialoguePanel.SetActive(false);
     }
 
-    public void OnNextWaveButtonClick()
+    // Метод для ShowUpgradeShop (исправляет ошибку в GameManager)
+    public void ShowUpgradeShop()
     {
-        nextWaveButton.gameObject.SetActive(false);
-        // TODO: сообщить WaveManager о ручном запуске волны
+        OpenShop();
+    }
+
+    // Заполнение магазина товарами
+    private void PopulateShop()
+    {
+        if (shopContentArea == null || shopItemPrefab == null) return;
+
+        // Очищаем существующие товары
+        foreach (Transform child in shopContentArea)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Создаём товары
+        CreateShopItem("Ускорение крана", 500, UpgradeType.TapSpeed, 1);
+        CreateShopItem("Терпение +", 300, UpgradeType.CustomerPatience, 2);
+        CreateShopItem("Цены +20%", 400, UpgradeType.DrinkPrice, 20);
+        CreateShopItem("Новый напиток", 1000, UpgradeType.NewDrink, 0);
+    }
+
+    private void CreateShopItem(string name, int price, UpgradeType type, int value)
+    {
+        GameObject itemObj = Instantiate(shopItemPrefab, shopContentArea);
+        ShopItem item = itemObj.GetComponent<ShopItem>();
+
+        if (item != null)
+        {
+            item.Initialize(name, price, type, value);
+        }
     }
 }

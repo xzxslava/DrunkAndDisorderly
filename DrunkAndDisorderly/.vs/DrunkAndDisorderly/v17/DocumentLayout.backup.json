@@ -3,116 +3,48 @@
   "WorkspaceRootPath": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\scripts\\barslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\scripts\\barslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\customer\\customerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\customer\\customerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\04_narrative\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\04_narrative\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\04_narrative\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\04_narrative\\dialoguedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\03_ui\\ordericon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\03_ui\\ordericon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\03_ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\03_ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\03_ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\03_ui\\bilboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\03_ui\\bilboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\01_scriptableobjects\\races\\racedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\01_scriptableobjects\\races\\racedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\bar\\drinkproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\bar\\drinkproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\bar\\tapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\bar\\tapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\bar\\equipmentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\bar\\equipmentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\economy\\debtmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\economy\\debtmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\economy\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\economy\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\economy\\goldmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\economy\\goldmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\wave\\dayprogression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\wave\\dayprogression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\wave\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\wave\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\bar\\barslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\bar\\barslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\customer\\customereffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\customer\\customereffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\customer\\customereffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\customer\\customerpatiece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\customer\\customerpatiece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\customer\\customerpatiece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\customer\\customerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\customer\\customerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\customer\\customermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\customer\\customermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\customer\\customerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\customer\\customerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\01_scriptableobjects\\effects\\effectdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\01_scriptableobjects\\effects\\effectdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\customer\\customerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\customer\\customerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\01_scriptableobjects\\drinks\\drinkdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\01_scriptableobjects\\drinks\\drinkdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\bar\\drinkproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\bar\\drinkproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\01_scriptableobjects\\races\\racedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\01_scriptableobjects\\races\\racedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\interaction\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\interaction\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\00_core\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\00_core\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\bar\\tapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\bar\\tapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\00_core\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\00_core\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\02_mechanics\\wave\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\wave\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\00_core\\eventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\00_core\\eventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\assets\\_project\\00_core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\00_core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|d:\\gamedev\\projects\\drunk and disorderly tavern brawl\\drunkanddisorderly\\drunkanddisorderly\\assets\\_project\\02_mechanics\\bar\\drinkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C9AF82-8F36-BF7C-2E09-B2F0E1CB22B7}|Assembly-CSharp.csproj|solutionrelative:assets\\_project\\02_mechanics\\bar\\drinkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -139,100 +71,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BarSlot.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\Scripts\\BarSlot.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\Scripts\\BarSlot.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\Scripts\\BarSlot.cs",
-              "RelativeToolTip": "Assets\\_Project\\Scripts\\BarSlot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:49:58.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerSpawner.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerSpawner.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerSpawner.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerSpawner.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAuwG4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:41:03.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\04_Narrative\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\04_Narrative\\DialogueManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\04_Narrative\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\04_Narrative\\DialogueManager.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAuwF8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:38:13.366Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DialogueData.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\04_Narrative\\DialogueData.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\04_Narrative\\DialogueData.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\04_Narrative\\DialogueData.cs",
-              "RelativeToolTip": "Assets\\_Project\\04_Narrative\\DialogueData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:37:49.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderIcon.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\03_UI\\OrderIcon.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\03_UI\\OrderIcon.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\03_UI\\OrderIcon.cs",
-              "RelativeToolTip": "Assets\\_Project\\03_UI\\OrderIcon.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwDoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:36:35.705Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "UIManager.cs",
               "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\03_UI\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\03_UI\\UIManager.cs",
               "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\03_UI\\UIManager.cs",
               "RelativeToolTip": "Assets\\_Project\\03_UI\\UIManager.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAuwKUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAwKwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:36:15.457Z"
+              "WhenOpened": "2026-03-09T16:04:37.431Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Bilboard.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\03_UI\\Bilboard.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\03_UI\\Bilboard.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\03_UI\\Bilboard.cs",
-              "RelativeToolTip": "Assets\\_Project\\03_UI\\Bilboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RaceData.cs",
+              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
+              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
+              "RelativeToolTip": "Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:36:03.289Z"
+              "WhenOpened": "2026-03-09T15:32:05.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerEffect.cs",
+              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
+              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
+              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAwH8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T15:31:33.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Interaction\\InputManager.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Interaction\\InputManager.cs",
+              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Interaction\\InputManager.cs",
+              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Interaction\\InputManager.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAuwJUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T14:35:23.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DrinkProduct.cs",
               "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\DrinkProduct.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Bar\\DrinkProduct.cs",
               "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\DrinkProduct.cs",
               "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Bar\\DrinkProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwDMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:35:46.509Z"
+              "WhenOpened": "2026-03-09T13:32:24.798Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -242,237 +141,75 @@
               "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Bar\\TapController.cs",
               "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\TapController.cs",
               "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Bar\\TapController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:34:33.632Z"
+              "WhenOpened": "2026-03-09T13:31:29.825Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EquipmentBase.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\EquipmentBase.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Bar\\EquipmentBase.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\EquipmentBase.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Bar\\EquipmentBase.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAqwKsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:34:00.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DebtManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Economy\\DebtManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Economy\\DebtManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Economy\\DebtManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Economy\\DebtManager.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAuwFwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:33:23.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ResourceManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Economy\\ResourceManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Economy\\ResourceManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Economy\\ResourceManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Economy\\ResourceManager.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAuwIIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:33:08.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GoldManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Economy\\GoldManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Economy\\GoldManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Economy\\GoldManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Economy\\GoldManager.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAuwF0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:32:53.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DayProgression.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Wave\\DayProgression.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Wave\\DayProgression.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Wave\\DayProgression.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Wave\\DayProgression.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA8wFQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:32:21.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "WaveManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAuwKQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:31:50.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BarSlot.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\BarSlot.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Bar\\BarSlot.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\BarSlot.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Bar\\BarSlot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:30:48.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CustomerEffect.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerEffect.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAcwGMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:30:23.763Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 3,
               "Title": "CustomerPatiece.cs",
               "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerPatiece.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerPatiece.cs",
               "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerPatiece.cs",
               "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerPatiece.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAuwFgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAYwGMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:30:04.558Z"
+              "WhenOpened": "2026-03-09T12:51:28.319Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CustomerOrder.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAuwEkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "WaveManager.cs",
+              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
+              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
+              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Wave\\WaveManager.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAuwMoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:29:52.124Z"
+              "WhenOpened": "2026-03-09T08:31:50.573Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CustomerMovement.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerMovement.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerMovement.cs",
-              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerMovement.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAuwFEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:29:24.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 4,
               "Title": "CustomerBase.cs",
               "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerBase.cs",
               "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerBase.cs",
               "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerBase.cs",
               "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAuwEoAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:29:03.547Z"
+              "WhenOpened": "2026-03-09T08:29:03.547Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "EffectData.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Effects\\EffectData.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\01_ScriptableObjects\\Effects\\EffectData.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Effects\\EffectData.cs",
-              "RelativeToolTip": "Assets\\_Project\\01_ScriptableObjects\\Effects\\EffectData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CustomerOrder.cs",
+              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
+              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
+              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Customer\\CustomerOrder.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAwHQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:28:28.355Z"
+              "WhenOpened": "2026-03-09T11:38:54.122Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "DrinkData.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Drinks\\DrinkData.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\01_ScriptableObjects\\Drinks\\DrinkData.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Drinks\\DrinkData.cs",
-              "RelativeToolTip": "Assets\\_Project\\01_ScriptableObjects\\Drinks\\DrinkData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "DrinkManager.cs",
+              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\DrinkManager.cs",
+              "RelativeDocumentMoniker": "Assets\\_Project\\02_Mechanics\\Bar\\DrinkManager.cs",
+              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\02_Mechanics\\Bar\\DrinkManager.cs",
+              "RelativeToolTip": "Assets\\_Project\\02_Mechanics\\Bar\\DrinkManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:27:42.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RaceData.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
-              "RelativeToolTip": "Assets\\_Project\\01_ScriptableObjects\\Races\\RaceData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:27:10.807Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SaveManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\SaveManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\00_Core\\SaveManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\SaveManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\00_Core\\SaveManager.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwEkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:26:06.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PoolManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\PoolManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\00_Core\\PoolManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\PoolManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\00_Core\\PoolManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:25:52.752Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "EventManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\EventManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\00_Core\\EventManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\EventManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\00_Core\\EventManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:25:34.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\_Project\\00_Core\\GameManager.cs",
-              "ToolTip": "D:\\GameDev\\Projects\\Drunk And Disorderly Tavern Brawl\\DrunkAndDisorderly\\DrunkAndDisorderly\\Assets\\_Project\\00_Core\\GameManager.cs",
-              "RelativeToolTip": "Assets\\_Project\\00_Core\\GameManager.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowGQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:24:54.277Z"
+              "WhenOpened": "2026-03-09T11:36:42.876Z",
+              "EditorCaption": ""
             }
           ]
         }

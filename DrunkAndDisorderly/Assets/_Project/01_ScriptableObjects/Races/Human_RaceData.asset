@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6679a3b9653ba148acb8e9a443c0b2b, type: 3}
+  m_Name: Human_RaceData
+  m_EditorClassIdentifier: 
+  raceName: Human
+  description: 
+  basePatience: 15
+  patienceRate: 1
+  moveSpeed: 2
+  skinColor: {r: 1, g: 1, b: 1, a: 1}
+  clothesMaterial: {fileID: 0}
+  animator: {fileID: 0}
+  modelPrefab: {fileID: 0}
+  happySound: {fileID: 0}
+  angrySound: {fileID: 0}
+  specialSound: {fileID: 0}
+  preferredDrinks:
+  - {fileID: 11400000, guid: 35535d91dd5abe145b04d07f48360d1a, type: 2}
+  - {fileID: 11400000, guid: f209b03ed6c83934d8400d140cf90c8b, type: 2}
+  regularDrinks:
+  - {fileID: 11400000, guid: 33746ff448be6c445b264ab196718876, type: 2}
+  - {fileID: 11400000, guid: 5e2c15f622d36b5479563acd122577ce, type: 2}

@@ -1,58 +1,101 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CustomerOrder : MonoBehaviour
 {
-    [Header("UI")]
+    [Header("Settings")]
     public GameObject orderIconPrefab;
     public Transform iconPosition;
+    public float iconHeight = 1.8f;
 
-    private DrinkData currentDrink;
+    [Header("Current Order")]
+    public DrinkData currentDrink;
+
     private GameObject activeIcon;
     private CustomerBase customer;
+    private SpriteRenderer iconRenderer;
 
     private void Awake()
     {
         customer = GetComponent<CustomerBase>();
+
         if (iconPosition == null)
-            iconPosition = transform; // запасной вариант
+        {
+            GameObject iconPosObj = new GameObject("IconPosition");
+            iconPosObj.transform.SetParent(transform);
+            iconPosObj.transform.localPosition = new Vector3(0, iconHeight, 0);
+            iconPosition = iconPosObj.transform;
+        }
+    }
+
+    private void Start()
+    {
+        // Ждём, пока посетитель сядет и инициализируется раса
+        Invoke(nameof(GenerateOrder), 1.5f);
     }
 
     public void GenerateOrder()
     {
-        if (customer.race == null)
+        if (customer == null || customer.race == null)
         {
-            Debug.LogWarning("Race not set, cannot generate order");
+            Debug.LogWarning("Customer or race is null, cannot generate order");
             return;
         }
 
-        // Выбираем случайный напиток из предпочтений или обычных
-        if (customer.race.preferredDrinks.Length > 0 && Random.value > 0.5f)
+        // ВЫБИРАЕМ НАПИТОК ИЗ ПРЕДПОЧТЕНИЙ РАСЫ
+        if (customer.race.preferredDrinks != null && customer.race.preferredDrinks.Length > 0)
         {
-            currentDrink = customer.race.preferredDrinks[Random.Range(0, customer.race.preferredDrinks.Length)];
+            // Выбираем случайный напиток из предпочтений
+            int randomIndex = Random.Range(0, customer.race.preferredDrinks.Length);
+            currentDrink = customer.race.preferredDrinks[randomIndex];
         }
-        else if (customer.race.regularDrinks.Length > 0)
+        else
         {
-            currentDrink = customer.race.regularDrinks[Random.Range(0, customer.race.regularDrinks.Length)];
+            // Если нет предпочтений, берём случайный из всех (как запасной вариант)
+            if (DrinkManager.Instance != null && DrinkManager.Instance.allDrinks.Count > 0)
+            {
+                List<DrinkData> availableDrinks = new List<DrinkData>();
+                int currentDay = GameManager.Instance != null ? GameManager.Instance.currentDay : 1;
+
+                foreach (var drink in DrinkManager.Instance.allDrinks)
+                {
+                    if (drink.unlockDay <= currentDay)
+                        availableDrinks.Add(drink);
+                }
+
+                if (availableDrinks.Count > 0)
+                    currentDrink = availableDrinks[Random.Range(0, availableDrinks.Count)];
+            }
+        }
+
+        if (currentDrink == null)
+        {
+            Debug.LogError("No drink available for order!");
+            return;
         }
 
         customer.currentOrder = currentDrink;
         ShowOrderIcon();
+
+        Debug.Log($"{customer.race.raceName} заказал {currentDrink.drinkName}");
     }
 
     private void ShowOrderIcon()
     {
-        if (currentDrink == null || orderIconPrefab == null) return;
+        if (orderIconPrefab == null || currentDrink == null) return;
 
-        activeIcon = Instantiate(orderIconPrefab, iconPosition.position, Quaternion.identity, transform);
+        activeIcon = Instantiate(orderIconPrefab, iconPosition.position, Quaternion.identity, iconPosition);
 
-        // Настраиваем иконку (спрайт, цвет и т.д.)
-        var iconRenderer = activeIcon.GetComponent<SpriteRenderer>();
+        iconRenderer = activeIcon.GetComponent<SpriteRenderer>();
         if (iconRenderer != null && currentDrink.icon != null)
         {
             iconRenderer.sprite = currentDrink.icon;
         }
 
-        // Добавляем Billboard, если нужно
+        // Настраиваем масштаб (если нужно)
+        activeIcon.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
+        // Добавляем Billboard
         if (activeIcon.GetComponent<Billboard>() == null)
         {
             activeIcon.AddComponent<Billboard>();
@@ -67,8 +110,8 @@ public class CustomerOrder : MonoBehaviour
         }
     }
 
-    public DrinkData GetCurrentOrder()
+    public bool IsCorrectDrink(DrinkData drink)
     {
-        return currentDrink;
+        return drink == currentDrink;
     }
 }
