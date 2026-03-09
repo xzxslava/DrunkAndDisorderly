@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845726140c1692446ba635be98ad962a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1.5
   rotationSpeed: 5
   targetSlot: {fileID: 0}
   isMovingToSlot: 1

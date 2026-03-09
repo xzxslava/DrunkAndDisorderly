@@ -203,10 +203,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845726140c1692446ba635be98ad962a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desiredDrink: {fileID: 0}
+  drinkIcon: {fileID: 0}
+  iconAnchor: {fileID: 0}
   moveSpeed: 2
   rotationSpeed: 5
   targetSlot: {fileID: 0}
-  isMovingToSlot: 1
+  isMovingToSlot: 0
   isLeaving: 0
 --- !u!1 &2701409107623599659
 GameObject:
